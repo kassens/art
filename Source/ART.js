@@ -88,10 +88,10 @@ ART.Container = new Class({
 
 });
 
-var UID = 0;
+var UID = Math.floor(Math.random() * 10e12);
 
 ART.uniqueID = function(){
-	return (new Date().getTime() + (UID++)).toString(36);
+	return (UID++).toString(36);
 };
 
 Color.detach = function(color){
